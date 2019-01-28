@@ -34,6 +34,13 @@ namespace Assignment1_S19
             computeFrequency(arr);
             Console.ReadKey();
             // write your self-reflection here as a comment
+            //I have learnt the following:
+            //1) Looping constructs and concepts
+            //2) Nested Loops
+            //3) Airthmatic and Logical Operators
+            //4) Also learnt indentation and formatting
+            //5) Also learnt deugging skills
+            //6) Also learnt packaginf structures and default pachages
 
         }
 
@@ -45,7 +52,7 @@ namespace Assignment1_S19
             bool isPrime = false;
             for (int i = 2; i < q; i++)
             {
-                if (q % i == 0)
+                if (q % i == 0)                         //logic to calculate Prime Nubers
                 {
                     isPrime = false;
                     break;
@@ -68,7 +75,7 @@ namespace Assignment1_S19
 
                     if (isPrime(i) == true)
                     {
-                        Console.WriteLine(+i + "\t");
+                        Console.WriteLine(+i + "\t");                        //logic to print Prime Nubers
                     }
 
                 }
@@ -95,7 +102,7 @@ namespace Assignment1_S19
         {
             try
             {
-                double a = 0;
+                double a = 0;                    //initializing the variables
                 double b = 0;
                 double prod1 = 0;
                 double prod2 = 0;
@@ -103,13 +110,13 @@ namespace Assignment1_S19
 
                 for (int p = 1; p <= n; p += 2)
                 {
-                    prod1 = factorial(p) / (p + 1);
+                    prod1 = factorial(p) / (p + 1);                 //Calculating First even value, and the sequence
                     a += prod1;
 
                 }
-                for (int p = 2; p <= n; p += 2)
+                for (int p = 2; p <= n; p += 2)                     //Calculating First odd value, and the sequence
                 {
-                    prod2 = factorial(p) / (p + 1);
+                    prod2 = factorial(p) / (p + 1);     
                     b += prod2;
 
                 }
@@ -134,7 +141,7 @@ namespace Assignment1_S19
                 String str = "";
                 for (; divd > 0;)
                 {
-                    rem = divd % 2;
+                    rem = divd % 2;                         //logic to coverts as given in steps
                     str += rem;
                     divd /= 2;
                 }
@@ -157,8 +164,8 @@ namespace Assignment1_S19
             {
                 String str = n.ToString();
                 int a = 1;
-                int b = 0;
-                for (int p = str.Length - 1; p >= 0; p--)
+                int b = 0;                                                  // logic to coverts as given in steps
+                for (int p = str.Length - 1; p >= 0; p--)   
                 {
                     if (str[p] == '1')
                     {
@@ -185,11 +192,11 @@ namespace Assignment1_S19
                 {
                     for (int b = n; b >= a; b--)
                     {
-                        Console.Write(" ");
+                        Console.Write(" ");             //printing spaces
                     }
                     for (int c = 1; c <= a; c++)
                     {
-                        Console.Write("* ");
+                        Console.Write("* ");                //printing stars
                     }
                     Console.WriteLine();
                     Console.ReadKey();
@@ -207,13 +214,13 @@ namespace Assignment1_S19
             {
                 int count;
                 int arLen = a.Length;
-                int[] rep = new int[arLen];
+                int[] rep = new int[arLen];                 //Initializing an array to hold the frequency values
                 for (int p = 0; p < arLen; p++)
                 {
                     rep[p] = -1;
                 }
 
-                for (int p = 0; p < arLen; p++)
+                for (int p = 0; p < arLen; p++)                     //Logic to compute the frequency
                 {
                     count = 1;
                     for (int q = p + 1; q < arLen; q++)
@@ -232,7 +239,7 @@ namespace Assignment1_S19
 
                 Console.Write("Frequency of element: \n");
                 Console.Write("Number \t Frequency \n");
-                for (int p = 0; p < arLen; p++)
+                for (int p = 0; p < arLen; p++)                             //printing the output as a table
                 {
                     if (rep[p] != 0)
                     {
